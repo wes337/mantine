@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-gallery-gallery-component-page-tsx",
+    "path": "/component/slider-filled",
+    "result": {"pageContext":{"_component":"SliderFilled","code":"import React from 'react';\nimport { createStyles, Slider } from '@mantine/core';\n\nconst useStyles = createStyles((theme) => ({\n  thumb: {\n    width: 20,\n    height: 20,\n    borderColor: theme.white,\n    backgroundColor: theme.colors[theme.primaryColor][6],\n    boxShadow: theme.shadows.sm,\n  },\n\n  bar: {\n    borderTopRightRadius: 0,\n    borderBottomRightRadius: 0,\n  },\n}));\n\nexport function SliderFilled() {\n  const { classes } = useStyles();\n  return <Slider classNames={classes} size={20} defaultValue={50} />;\n}\n","category":{"name":"Sliders","path":"/category/sliders/"},"url":"/component/slider-filled","attributes":{"title":"Slider with contained thumb","category":"sliders","author":"rtivital","withColor":true,"dependencies":[],"canvas":{"center":true,"maxWidth":320}}}},
+    "staticQueryHashes": []}

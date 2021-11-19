@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-gallery-gallery-component-page-tsx",
+    "path": "/component/slider-hover",
+    "result": {"pageContext":{"_component":"SliderHover","code":"import React from 'react';\nimport { Slider } from '@mantine/core';\nimport { useHover } from '@mantine/hooks';\n\nexport function SliderHover() {\n  const { hovered, ref } = useHover();\n\n  return (\n    <Slider\n      defaultValue={40}\n      min={10}\n      max={90}\n      ref={ref}\n      label={null}\n      styles={{\n        thumb: {\n          transition: 'opacity 150ms ease',\n          opacity: hovered ? 1 : 0,\n        },\n\n        dragging: {\n          opacity: 1,\n        },\n      }}\n    />\n  );\n}\n","category":{"name":"Sliders","path":"/category/sliders/"},"url":"/component/slider-hover","attributes":{"title":"Slider with thumb visible on hover","category":"sliders","author":"rtivital","withColor":true,"dependencies":["/core/slider/"],"canvas":{"center":true,"maxWidth":420}}}},
+    "staticQueryHashes": []}

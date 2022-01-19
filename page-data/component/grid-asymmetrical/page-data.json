@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-gallery-gallery-component-page-tsx",
-    "path": "/component/grid-asymmetrical",
-    "result": {"pageContext":{"_component":"GridAsymmetrical","code":"import React from 'react';\nimport { Grid, Skeleton, Container } from '@mantine/core';\n\nconst child = <Skeleton height={140} radius=\"md\" animate={false} />;\n\nexport function GridAsymmetrical() {\n  return (\n    <Container my=\"md\">\n      <Grid>\n        <Grid.Col xs={4}>{child}</Grid.Col>\n        <Grid.Col xs={8}>{child}</Grid.Col>\n        <Grid.Col xs={8}>{child}</Grid.Col>\n        <Grid.Col xs={4}>{child}</Grid.Col>\n        <Grid.Col xs={3}>{child}</Grid.Col>\n        <Grid.Col xs={3}>{child}</Grid.Col>\n        <Grid.Col xs={6}>{child}</Grid.Col>\n      </Grid>\n    </Container>\n  );\n}\n","category":{"name":"Grids","path":"/category/grids/"},"url":"/component/grid-asymmetrical","attributes":{"title":"Grid with asymmetrical columns","category":"grids","author":"rtivital","responsive":true,"dependencies":["/core/grid/","/core/skeleton/","/core/container/"],"canvas":{"center":false}}}},
-    "staticQueryHashes": []}

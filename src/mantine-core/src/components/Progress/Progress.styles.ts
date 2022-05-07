@@ -42,7 +42,7 @@ export default createStyles(
       alignItems: 'center',
       backgroundColor: theme.fn.themeColor(
         color || theme.primaryColor,
-        theme.colorScheme === 'dark' ? 8 : 6,
+        theme.fn.primaryShade(),
         false
       ),
       transition: 'width 100ms linear',

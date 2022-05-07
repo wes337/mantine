@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { useDropzone, FileRejection } from 'react-dropzone';
 import {
   DefaultProps,
-  ClassNames,
+  Selectors,
   MantineNumberSize,
   LoadingOverlay,
   Box,
@@ -11,7 +11,7 @@ import {
 import { assignRef } from '@mantine/hooks';
 import useStyles from './Dropzone.styles';
 
-export type DropzoneStylesNames = ClassNames<typeof useStyles>;
+export type DropzoneStylesNames = Selectors<typeof useStyles>;
 
 export interface DropzoneStatus {
   accepted: boolean;
@@ -41,7 +41,7 @@ export interface DropzoneProps extends DefaultProps<DropzoneStylesNames> {
   loading?: boolean;
 
   /** File types to accept  */
-  accept?: string[];
+  accept?: { [key: string]: string[] } | string[];
 
   /** Get open function as ref */
   openRef?: React.ForwardedRef<() => void | undefined>;
@@ -89,7 +89,7 @@ export const Dropzone = forwardRef<HTMLDivElement, DropzoneProps>((props: Dropzo
     onDropAccepted: (files) => onDrop(files),
     onDropRejected: (fileRejections) => onReject(fileRejections),
     disabled: disabled || loading,
-    accept,
+    accept: Array.isArray(accept) ? accept.reduce((r, key) => ({ ...r, [key]: [] }), {}) : accept,
     multiple,
     maxSize,
   });

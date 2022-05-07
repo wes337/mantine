@@ -1,7 +1,9 @@
 export * from './use-clipboard';
 export * from './use-color-scheme';
+export * from './use-counter';
 export * from './use-debounced-value';
 export * from './use-document-title';
+export * from './use-document-visibility';
 export * from './use-element-size';
 export * from './use-event-listener';
 export * from './use-force-update';
@@ -26,3 +28,5 @@ export * from './use-move';
 export * from './use-mouse';
 export * from './use-scroll-into-view';
 export * from './use-click-outside';
+export * from './use-focus-within';
+export * from './use-network';

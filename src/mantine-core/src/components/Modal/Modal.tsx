@@ -5,7 +5,7 @@ import {
   DefaultProps,
   MantineNumberSize,
   MantineShadow,
-  ClassNames,
+  Selectors,
   MantineStyleSystemSize,
   getDefaultZIndex,
   useMantineDefaultProps,
@@ -19,7 +19,7 @@ import { Box } from '../Box';
 import { GroupedTransition, MantineTransition } from '../Transition';
 import useStyles from './Modal.styles';
 
-export type ModalStylesNames = ClassNames<typeof useStyles>;
+export type ModalStylesNames = Selectors<typeof useStyles>;
 
 export interface ModalProps
   extends Omit<DefaultProps<ModalStylesNames>, MantineStyleSystemSize>,
@@ -196,7 +196,7 @@ export function Modal(props: ModalProps) {
         }}
       >
         {(transitionStyles) => (
-          <Box className={cx(classes.root, className)} {...others}>
+          <Box id={baseId} className={cx(classes.root, className)} {...others}>
             <div
               className={classes.inner}
               onKeyDownCapture={(event) => {

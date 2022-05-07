@@ -84,7 +84,7 @@ export default createStyles(
       zIndex: getDefaultZIndex('overlay'),
       backgroundColor: theme.fn.themeColor(
         color || theme.primaryColor,
-        theme.colorScheme === 'dark' ? 8 : 6,
+        theme.fn.primaryShade(),
         false
       ),
       border: withBorder

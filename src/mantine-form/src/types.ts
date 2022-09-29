@@ -109,6 +109,7 @@ export interface UseFormInput<Values> {
   validate?: FormValidateInput<Values>;
   clearInputErrorOnChange?: boolean;
   validateInputOnChange?: boolean | LooseKeys<Values>[];
+  validateInputOnBlur?: boolean | LooseKeys<Values>[];
 }
 
 export interface UseFormReturnType<Values> {
@@ -137,3 +138,7 @@ export interface UseFormReturnType<Values> {
   resetDirty: ResetDirty<Values>;
   isValid: IsValid<Values>;
 }
+
+export type UseForm<Values = Record<string, unknown>> = (
+  input?: UseFormInput<Values>
+) => UseFormReturnType<Values>;

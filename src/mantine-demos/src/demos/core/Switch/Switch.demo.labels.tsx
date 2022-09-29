@@ -9,7 +9,7 @@ function Demo() {
 }
 `;
 
-function Label() {
+function Demo() {
   return (
     <Group position="center">
       <Switch size="xs" onLabel="ON" offLabel="OFF" />
@@ -23,6 +23,6 @@ function Label() {
 
 export const labels: MantineDemo = {
   type: 'demo',
-  component: Label,
+  component: Demo,
   code,
 };
